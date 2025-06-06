@@ -41,7 +41,7 @@ export default function ClientsScreen() {
   return (
     <View style={styles.container}>
       <View>
-        <Text style={styles.title}>Módulo de Clientes</Text>
+        <Text style={styles.title}>Apartado de Clientes</Text>
         <TextInput
           style={styles.input}
           placeholder="Buscar por nombre"
@@ -52,7 +52,7 @@ export default function ClientsScreen() {
           <Text style={styles.textButton}>Buscar</Text>
         </Pressable>
         <Pressable style={styles.send}>
-          <Link href="/clientes/createC" style={styles.textButton}>Crear Cliente</Link>
+          <Link href="/clientes/createC" style={styles.textButton}>Crear Nuevo Cliente</Link>
         </Pressable>
 
         <View style={styles.listContainer}>
@@ -85,13 +85,13 @@ export default function ClientsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#1a1a1a', 
     padding: 10,
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
   card: {
-    backgroundColor: '#f8f9fa',
+    backgroundColor: '#2e2e2e', 
     padding: 15,
     marginVertical: 8,
     borderRadius: 8,
@@ -103,6 +103,7 @@ const styles = StyleSheet.create({
   nombre: {
     fontSize: 18,
     fontWeight: 'bold',
+    color: '#ffd700',
   },
   listContainer: {
     flex: 1,
@@ -112,53 +113,56 @@ const styles = StyleSheet.create({
     fontSize: 30,
     marginTop: 20,
     fontWeight: "bold",
-    margin: 15
+    margin: 15,
+    color: '#d1a3ff', 
   },
   label: {
     marginTop: 20,
     fontSize: 20,
     fontWeight: "bold",
+    color: '#ffd700', 
   },
   input: {
     borderRadius: 50,
     borderWidth: 3,
-    borderColor: "gray",
+    borderColor: "#a020f0",
     fontSize: 20,
     paddingHorizontal: 10,
     marginVertical: 15,
     backgroundColor: "white",
+    color: "#000",
   },
   send: {
-    backgroundColor: "blue",
+    backgroundColor: "#6a0dad", 
     borderRadius: 10,
     marginTop: 15,
     alignItems: "center",
     paddingVertical: 10,
-    width: 300
+    width: 300,
   },
   updaT: {
-    backgroundColor: "cyan",
+    backgroundColor: "#9370DB", 
     borderRadius: 10,
     marginTop: 15,
     alignItems: "center",
     paddingVertical: 10,
-    width: 100
+    width: 100,
   },
   deleT: {
-    backgroundColor: "red",
+    backgroundColor: "#ffcc00",
     borderRadius: 10,
     marginTop: 15,
     alignItems: "center",
     paddingVertical: 10,
-    width: 100
+    width: 100,
   },
   buttonContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginTop: 10
+    marginTop: 10,
   },
   textButton: {
-    color: "white",
+    color: "#000", 
     fontSize: 20,
     fontWeight: "bold",
   },
@@ -169,6 +173,6 @@ const styles = StyleSheet.create({
   footerText: {
     fontSize: 20,
     margin: 5,
+    color: '#d1a3ff', 
   },
 });
-

@@ -1,4 +1,4 @@
-from app.models.user import Users
+from app.models.user import User
 from app.models.log import Log
 from app import db
 from werkzeug.security import check_password_hash, generate_password_hash
@@ -7,7 +7,7 @@ from datetime import datetime
 
 
 def login_user(email, password):
-    user = Users.query.filter_by(email=email).first()
+    user = User.query.filter_by(email=email).first()
     if user and check_password_hash(user.password, password):
         access_token= create_access_token(identity=user.id)
         log = Log(user_id = user.id, action = "login", date = datetime.now())
@@ -26,7 +26,7 @@ def logout_user(user_id):
 
 
 def update_user(user_id, updated_data):
-    user = Users.query.get(user_id)
+    user = User.query.get(user_id)
     if not user:
         return None
     
@@ -40,7 +40,7 @@ def update_user(user_id, updated_data):
     return user
 
 def  toggle_user_status(user_id, is_active:str):
-    user = Users.query.get(user_id)
+    user = User.query.get(user_id)
     if not user:
         return None
     

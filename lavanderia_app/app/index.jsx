@@ -13,7 +13,7 @@ export default function HomeScreen() {
           <Link href="/usuarios/createU" style={styles.textButton}>Registrarse</Link>
         </Pressable>
         <Pressable style={styles.send}>
-          <Link href={"/clientes"} style={styles.textButton}>Ver Clientes</Link>
+          <Link href={"/clientes"} style={styles.textButton}>Clientes registrados</Link>
         </Pressable>
       </View>
     </View>

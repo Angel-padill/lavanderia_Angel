@@ -24,7 +24,7 @@ export default function ClientsScreen() {
       const data = await response.json()
 
       if (response.ok) {
-        Alert.alert("Usuario encontrado con exito")
+        Alert.alert("Aqui esta el usuario")
         console.log(data)
         setClientes(data)
 
@@ -44,7 +44,7 @@ export default function ClientsScreen() {
         <Text style={styles.title}>Apartado de Clientes</Text>
         <TextInput
           style={styles.input}
-          placeholder="Buscar por nombre"
+          placeholder="Buscar cliente"
           value={name}
           onChangeText={(text) => setName(text)}
         />

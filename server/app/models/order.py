@@ -16,3 +16,5 @@ class Order(db.Model):
     pagado = db.Column(db.Integer, nullable=False)
 
     #relaciones inversas pendientes
+    germents = db.relationship("Garment", backref="order", lazy=True)
+    #Relacion de pago

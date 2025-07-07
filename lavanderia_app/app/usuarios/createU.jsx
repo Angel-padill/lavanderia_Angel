@@ -28,7 +28,7 @@ export default function CreateUserScreen() {
       const data = await response.json()
 
       if (response.ok) {
-        Alert.alert("Usuario registrado con exito")
+        Alert.alert("Usuario registrado exitosamente")
         console.log(data)
         router.push("/login")
       } else {
@@ -47,21 +47,21 @@ export default function CreateUserScreen() {
         <Text style={styles.label}>Nombre:</Text>
         <TextInput
           style={styles.input}
-          placeholder='ingresa tu nombre'
+          placeholder='nombre'
           value={name}
           onChangeText={(text) => setName(text)}
         />
         <Text style={styles.label}>Email:</Text>
         <TextInput
           style={styles.input}
-          placeholder='ingresa tu correo'
+          placeholder='correo'
           value={email}
           onChangeText={(text) => setEmail(text)}
         />
         <Text style={styles.label}>Password:</Text>
         <TextInput
           style={styles.input}
-          placeholder='ingresa tu contraseña'
+          placeholder='contraseña'
           secureTextEntry={true}
           value={password}
           onChangeText={(text) => setPassword(text)}

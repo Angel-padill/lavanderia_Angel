@@ -27,12 +27,12 @@ export default function CreateClientScreen() {
 
 
       if (response.ok) {
-        Alert.alert("Cliente creado con exito")
+        Alert.alert("Cliente creado exitosamente")
         console.log(data)
         router.push("/clientes")
 
       } else {
-        Alert.alert("error al crear usuario")
+        Alert.alert("error su usuario no se creo")
       }
 
     } catch (error) {
@@ -48,21 +48,21 @@ export default function CreateClientScreen() {
         <Text style={styles.label}>Nombre:</Text>
         <TextInput
           style={styles.input}
-          placeholder='ingresa tu nombre'
+          placeholder='nombre'
           value={name}
           onChangeText={(text) => setName(text)}
         />
         <Text style={styles.label}>Telefono:</Text>
         <TextInput
           style={styles.input}
-          placeholder='ingresa tu telefono'
+          placeholder='telefono'
           value={phone_number}
           onChangeText={(text) => setPhoneN(text)}
         />
         <Text style={styles.label}>Direccion:</Text>
         <TextInput
           style={styles.input}
-          placeholder='ingresa tu direccion'
+          placeholder='direccion'
           value={address}
           onChangeText={(text) => setAddress(text)}
         />

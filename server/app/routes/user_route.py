@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from werkzeug.security import generate_password_hash
-from app.models.user import Users
+from app.models.user import User
 from app.Controllers.user_controller import login_user, logout_user, update_user, toggle_user_status, get_user_logs
 from app.database.db import db
 
@@ -20,11 +20,11 @@ def create_user():
         return jsonify({"error:"}), 400
 
 
-    if Users.query.filter_by(email=email).first():
+    if User.query.filter_by(email=email).first():
         return jsonify({"error:"}), 400
     
     password_hash = generate_password_hash(password)
-    new_user= Users(name=name,email=email,password=password_hash,rol=rol)
+    new_user= User(name=name,email=email,password=password_hash,rol=rol)
     db.session.add(new_user)
     #registra cambio
 
